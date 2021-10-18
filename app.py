@@ -1,6 +1,7 @@
 #Projet data visualisation - Ananda YEANN DS5 20181070
 #Ventes immobilières en IDF sur l'année 2019/2020 
 #https://drive.google.com/drive/folders/1v4Ziz_5fV0lrkpsvGzYMzoaOWHhYxPK5?usp=sharing
+#https://github.com/nandi9x/DVF.git
 
 
 
@@ -277,11 +278,11 @@ def main():
     st.write('Voici un aperçu des ventes de 2016 à 2020')
     col1, col2, col3, col4, col5 = st.columns(5)
     #fonction count_rows pour connaître 
-    col1.metric("2016", "2 644 109")
-    col2.metric("2017", "3 023 253", "14.34 %")
-    col3.metric("2018", "2 996 397", "-0.89 %")
-    col4.metric("2019", "3 205 120", "+6.97 %")
-    col5.metric("2020", "2 245 097", "-29.95  %")
+    col1.metric("2016", "341 038")
+    col2.metric("2017", "379 022", "11.14 %")
+    col3.metric("2018", "373 267", "-1.58 %")
+    col4.metric("2019", "393 325", "+6.97 %")
+    col5.metric("2020", "312 428", "-20.61 %")
 
     #st.table(df.columns)
     #st.write(df.isnull().sum())
@@ -326,8 +327,8 @@ def main():
                 st.line_chart(by_month)
 
             elif choix == 'département':
-                ext4_valdep(df2019) #ne s'affiche pas mais marche sur jupyter. pb d'affichage? 
-            
+                #ext4_valdep(df2019) #ne s'affiche pas mais marche sur jupyter. pb d'affichage? 
+                ext6_val(df2019)
         #------------------#
         if annee == '2020':
             df2020 = loading('/Users/winnie/Documents/nandi/EFREI/M1/data vizualisation/projet/2020new.csv')
@@ -533,20 +534,20 @@ def main():
                 if val == '800 000€' :
                     newdata = filtre_val2(df20)
                     #st.dataframe(newdata.tail())
-                    'ton intervalle est entre 300 000€ et 800 000€'
+                    st.sidebar.write('ton intervalle est entre 300 000€ et 800 000€')
                     heat(newdata)
 
 
                 if val == '10 000 000€' :
                     newdata = filtre_val3(df20)
                     #st.dataframe(newdata.tail())
-                    'ton intervalle est entre 800 000€ et 10 000 000€'
+                    st.sidebar.write('ton intervalle est entre 800 000€ et 10 000 000€')
                     heat(newdata)
                 
                 if val == '400 000 000€' :
                     newdata = filtre_val4(df20)
                     #st.dataframe(newdata.tail())
-                    'ton intervalle est entre 10 000 000€ et 400 000 000€'
+                    st.sidebar.write('ton intervalle est entre 10 000 000€ et 400 000 000€')
                     heat(newdata)
             else:
                 ''
