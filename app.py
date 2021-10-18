@@ -1,6 +1,5 @@
 #Projet data visualisation - Ananda YEANN DS5 20181070
 #Ventes immobilières en IDF sur l'année 2019/2020 
-#https://drive.google.com/drive/folders/1v4Ziz_5fV0lrkpsvGzYMzoaOWHhYxPK5?usp=sharing
 #https://github.com/nandi9x/DVF.git
 
 
