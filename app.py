@@ -6,7 +6,7 @@
 
 from os import defpath
 import pandas as pd
-from pandas.core.base import DataError
+#from pandas.core.base import DataError
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
